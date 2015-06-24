@@ -1,8 +1,0 @@
-<%= simple_form_for(@new, html: { multipart: true }) do |f| %>
-  <%= f.error_notification %>
-
-  <%= f.input :name %>
-  <%= f.label :picture %>
-  <%= f.file_field :picture %>
-  <%= f.button :submit %>
-<% end %>

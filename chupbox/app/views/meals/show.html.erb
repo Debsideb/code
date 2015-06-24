@@ -1,2 +1,7 @@
-<h1>Meals#show</h1>
-<p>Find me in app/views/meals/show.html.erb</p>
+<h1>Meals we're selling</h1>
+<% @meals.each do |m|%>
+<p><b><%= link_to m.name, meal_path(@meal, m) %> </b>
+  ---- <%= link_to "Edit this meal", edit_meal_path(@meal, m) %>
+  ---- <%= link_to "Delete this meal", meal_path(@meal, m), :method => 'delete' %><br>
+<i><%= m.description %></i></p>
+<% end %>

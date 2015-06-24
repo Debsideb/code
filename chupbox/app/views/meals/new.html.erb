@@ -1,2 +1,20 @@
-<h1>Meals#new</h1>
-<p>Find me in app/views/meals/new.html.erb</p>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3" id="push-down">
+      <h1>Create new meal</h1>
+
+      <%= simple_form_for @meal do |m| %>
+
+      <%= m.input :name, :label => "Name this beauty" %>
+      <%= m.input :description, :label => "Short description fuckface" %>
+
+
+      <%= m.label :picture %>
+      <%= m.file_field :picture %>
+
+      <%= m.button :submit %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
