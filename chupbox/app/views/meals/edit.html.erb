@@ -1,2 +1,21 @@
-<h1>Meals#edit</h1>
-<p>Find me in app/views/meals/edit.html.erb</p>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3" id="push-down">
+      <h1> Edit Meal</h1>
+
+      <%= simple_form_for @meal do |m| %>
+
+      <%= m.input :name, :label => "Name this beauty" %>
+      <%= m.input :description, :label => "Short description fuckface" %>
+      <%= m.input :price, :label => "How much we sell it" %>
+
+
+      <%= m.label :picture %>
+      <%= m.file_field :picture %>
+
+      <%= m.button :submit %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
